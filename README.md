@@ -1,49 +1,42 @@
-# Selenium JS Example Project
+# Online Calculator Application Test (OCAT)
 
-This is a base project using the [`selenium-webdriver`](http://seleniumhq.github.io/selenium/docs/api/javascript/index.html) for JavaScript and Mocha to handle the tests and reporting.
+OCAT is a simple test automation framework developed using Node.js with Selenium webdriver, to execute a few automation test suites against this [online](https://ahfarmer.github.io/calculator/) calculator application.
 
-## Run Locally
+## Installation
 
-1. Install [Mocha](http://mochajs.org) globally
 
-  ```
-  $ npm install -g mocha
-  ```
+```bash
+npm install
+```
 
-4. Install [cross-env](https://www.npmjs.com/package/cross-env) to make sure Environment Variables are set correctly in each OS:
+## Usage
 
-  ```
-  $ npm install -g cross-env
-  ```
+```python
+npm run op-test
+```
+To execute arithmetical operation test suite to satisfy the following scenarios
+- Browse to the Calculator App
+- Create a test for doing addition - Add 1 and 3
+- Create a test for doing subtraction - Minus 4 from 9
+- Create a test for doing multiplication - Multiply 3 by 1
+- Create a test for doing division - Divide 10 by 2
 
-3. Run all project dependencies:
 
-  ```
-  $ npm install
-  ```
+```python
+npm run ui-test
+```
+To execute UI test suite scenarios like validating if UI has
+- all the necessary digit web elements
+- all necessary arithmetic web elements
+- a result display element with a correct default value etc.
 
-4. Run the following command to run the test:
 
-  ```
-  $ npm run test
-  ```
+## Finally
 
-## Configuration Overrides
+I tried to develop the framework with the most important software development principles like DRY(Don't Repeat Yourself), separation of concern, and code reusability and also used the page object model (POM) design pattern.
 
-All variables can be modified by changing the `.env` file with the appropiate files. The available environment variables to override are:
+I made it simple & lightweight to satisfy the major requirements & few additional scenarios by incorporating explanatory comments as much as needed to clarify the intention.
 
-- MOCHA_BROWSER: specifies the webdriver to use. Options are:
-    - phantomjs
-    - chrome
-    - headlessChrome
-    - firefox
-    - opera
-    - safari
-    - ie
-    - edge
+Please feel free to contact me if you have any questions and/or suggestions.
 
-- TEST_BASE_URL: specifies which url the tests should run on. 
-
-### CI Override
-
-To change the variable during the CI process a special `.env` file can be found on the `helpers` folder, this has the same variables but the values are changed to keys so it can easily be replaced by any value.
+© [elichii25]()
